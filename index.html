@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <link rel="stylesheet" href="styles.css" />
+    <title>Blockchain</title>
+  </head>
+
+  <body>
+    <div class="d-flex flex-column">
+      <nav class="d-flex justify-content-between p-4 align-items-center">
+        <div class="d-flex gap align-items-center">
+          <img
+            src="https://login.blockchain.com/img/bc-icon.svg?169742128c"
+            alt="icon"
+          />
+          <a href="" class="text-dark font-weight-bold text-decoration-none"
+            >Home</a
+          >
+          <a href="" class="text-dark font-weight-bold text-decoration-none"
+            >Prices</a
+          >
+          <a href="" class="text-dark font-weight-bold text-decoration-none"
+            >Earn</a
+          >
+        </div>
+        <div class="butn gap">
+          <button class="btn-space">Send</button>
+          <button class="btn-space">Recieved</button>
+          <button
+            data-e2e="fabButton"
+            class="d-flex align-items-center justify-content-center trade-btn"
+            color="grey800"
+            type="button"
+          >
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <mask
+                id="mask0_318_8672"
+                maskUnits="userSpaceOnUse"
+                x="-2"
+                y="-1"
+                width="23"
+                height="21"
+                style="mask-type: alpha"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M21 -1H-1V5.63587C-1.64066 6.95464 -2 8.43535 -2 10C-2 11.5646 -1.64066 13.0454 -1 14.3641V19H3.63587C4.95464 19.6407 6.43535 20 8 20C9.56465 20 11.0454 19.6407 12.3641 19H21V-1ZM12.3641 19C15.7003 17.3793 18 13.9582 18 10C18 4.47715 13.5228 0 8 0C4.0418 0 0.620721 2.2997 -1 5.63587V14.3641C-0.0199373 16.3815 1.61846 18.0199 3.63587 19H12.3641Z"
+                  fill="#121D33"
+                ></path>
+              </mask>
+              <g mask="url(#mask0_318_8672)">
+                <ellipse cx="13" cy="6" rx="6" ry="6" fill="white"></ellipse>
+              </g>
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M16 10C16 14.4183 12.4183 18 8 18C3.58172 18 0 14.4183 0 10C0 5.58172 3.58172 2 8 2C12.4183 2 16 5.58172 16 10ZM6.52172 8.99655C6.78384 8.99655 6.99633 8.78406 6.99633 8.52194V5.97463C6.99633 5.71251 7.20882 5.50002 7.47094 5.50002H8.52867C8.79079 5.50002 9.00328 5.71251 9.00328 5.97463V8.52194C9.00328 8.78406 9.21577 8.99655 9.47789 8.99655H12.0252C12.2873 8.99655 12.4998 9.20904 12.4998 9.47116V10.5289C12.4998 10.791 12.2873 11.0035 12.0252 11.0035H9.47789C9.21577 11.0035 9.00328 11.216 9.00328 11.4781V14.0254C9.00328 14.2875 8.79079 14.5 8.52867 14.5H7.47094C7.20882 14.5 6.99633 14.2875 6.99633 14.0254V11.4781C6.99633 11.216 6.78384 11.0035 6.52172 11.0035H3.97441C3.71229 11.0035 3.49981 10.791 3.49981 10.5289V9.47116C3.49981 9.20904 3.7123 8.99655 3.97441 8.99655H6.52172Z"
+                fill="white"
+              ></path>
+            </svg>
+            <div
+              color="white"
+              cursor="inherit"
+              opacity="1"
+              class="sc-gzVnrw cqfRsR"
+            >
+              Trade
+            </div>
+          </button>
+          <div class="d-flex gap align-items-center">
+            <i class="fa-solid fa-mobile-screen text-gray mob"></i>
+
+            <i class="fa-solid fa-rotate-right text-gray mob"></i>
+
+            <i class="fa-solid fa-user text-gray mob"></i>
+          </div>
+        </div>
+        <button
+          class="burger-menu border-0 bg"
+          type="button"
+          data-toggle="collapse"
+          data-target="#sidebar"
+          aria-controls="sidebar"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- Sidebar  -->
+      <div class="whole">
+        <div class="sidebar">
+          <div id="accordion">
+            <div class="d-flex position-relative">
+              <div
+                class="card-header"
+                data-toggle="collapse"
+                data-target="#collapseOne"
+                aria-expanded="true"
+                aria-controls="collapseOne"
+              >
+                <div>
+                  <p class="acc_p">Total Balance</p>
+                  <h2 class="acc_h">$0.00</h2>
+                </div>
+                <i class="fas fa-chevron-down text-gray"></i>
+              </div>
+              <div
+                id="collapseOne"
+                class="collapse show bg-white border acc_c"
+                aria-labelledby="headingOne"
+                data-parent="#accordion"
+              >
+                <div class="card-body">
+                  <div class="">
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <p class="font-weight-bold">BTC</p>
+                      <p>0</p>
+                    </div>
+                    <div
+                      class="d-flex justify-content-between align-items-center"
+                    >
+                      <button class="border p-1 bg-transparent text-center accordion-btn">
+                        Show in USD
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Home and Bitcoin  -->
+          <div id="sidebar">
+            <a href="/" class="sidebar-item" data-target="home" onclick="showHome()">
+              <i class="fas fa-home"></i> Home
+            </a>
+            <a href="#" class="sidebar-item" data-target="bitcoin" onclick="showBitcoin()">
+              <i class="fab fa-bitcoin"></i> Bitcoin
+            </a>
+            <a href="#" class="sidebar-item">
+              <i class="fas fa-gift"></i> Airdrop
+            </a>
+            <a href="#" class="sidebar-item">
+              <i class="fas fa-exchange-alt"></i> Exchange
+            </a>
+          </div>
+        </div>
+
+        <div class="content">
+          
+          <div class="home">
+            <div class="holding_card">
+              <div class="card_1">
+                <h2>Holdings</h2>
+                <button class="text-primary">
+                  View Prices <i class="fa-solid fa-arrow-right-long"></i>
+                </button>
+              </div>
+              <div class="d-flex justify-content-between align-items-center">
+                <div class="btcc">
+                  <img
+                    src="https://raw.githubusercontent.com/blockchain/coin-definitions/master/extensions/blockchains/bitcoin/info/logo.png"
+                    alt="btc"
+                    style="width: 32px; height: 32px"
+                  />
+                  <h3 class="fIGXEG">Bitcoin</h3>
+                </div>
+                <div class="b_card">
+                  <h4>$0.00</h4>
+                  <p>0 BTC</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="chart">
+              <div class="chart_btn">
+                <button class="fjaoVm">Buy</button>
+                <button class="fjaoVm">Sell</button>
+                <button class="fjaoVm" id="swapButton" data-toggle="modal" data-target="#swapModal">Swap</button>
+                
+              </div>
+            </div>
+          </div>
+          
+
+          <div class="bitcoin">
+              <div class="d-flex align-items-center gap">
+                <img src="https://raw.githubusercontent.com/blockchain/coin-definitions/master/extensions/blockchains/bitcoin/info/logo.png" alt="btc" style="width: 32px; height: 32px;"/>
+                <h2 class="hnDsPv">Bitcoin</h2>
+              </div>
+              <h4 class="eAsDeY">Bitcoin (BTC) is the original crypto and the internet’s premier digital currency.</h4>
+
+              <div class="btc_cards d-flex pb-3 mt-4 gap">
+                <div class="btc_card ">
+                  <h2 class="hLxhAA">BTC Balance</h2>
+                  <h2 class="fd-24"> $0.00</h2>
+                  <button class="req_btc">Request BTC  Now</button>
+                </div>
+
+                <div class="btc_price_card ">
+                    <h2 class="hLxhAA">BTC Price</h2>
+                    <h2 class="fd-24"> $37,778.75</h2>
+                    <p class="text-success">$1,097.82 (2.99)% <span style="color: gray;">this week</span></p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>      
+    </div>
+
+  </body>
+
+
+
+
+<!-- ... (your script tags and other dependencies) ... -->
+
+<!-- for chart  -->
+<!-- Add this script at the end of your HTML, after including other scripts -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // ... (your existing code)
+
+    // Get references to the buttons and chart canvas
+    const buyButton = document.querySelector('.chart_btn button:nth-child(1)');
+    const sellButton = document.querySelector('.chart_btn button:nth-child(2)');
+    const swapButton = document.querySelector('.chart_btn button:nth-child(3)');
+    const chartCanvas = document.getElementById('bitcoinChart');
+
+    // Dummy data for the chart (replace with your actual data)
+    const chartData = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [{
+        label: 'Bitcoin Price',
+        data: [65, 59, 80, 81, 56, 55, 40],
+        borderColor: 'rgba(255, 99, 132, 1)',
+        borderWidth: 2,
+        fill: false,
+      }]
+    };
+
+    // Options for the chart
+    const chartOptions = {
+      scales: {
+        x: {
+          type: 'linear',
+          position: 'bottom'
+        },
+        y: {
+          min: 0
+        }
+      }
+    };
+
+    // Create the chart
+    const bitcoinChart = new Chart(chartCanvas, {
+      type: 'line',
+      data: chartData,
+      options: chartOptions
+    });
+
+    // Attach event listeners to the buttons
+    if (buyButton) {
+      buyButton.addEventListener('click', function () {
+        // Add logic for the "Buy" button click
+        console.log('Buy button clicked');
+      });
+    }
+
+    if (sellButton) {
+      sellButton.addEventListener('click', function () {
+        // Add logic for the "Sell" button click
+        console.log('Sell button clicked');
+      });
+    }
+
+    if (swapButton) {
+      swapButton.addEventListener('click', function () {
+        // Show the modal when the "Swap" button is clicked
+        swapModal.show();
+      });
+    }
+  });
+</script>
+
+
+
+
+
+
+
+
+<!-- sidebar buttons  -->
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    // Get references to the Bitcoin and Content elements
+    const bitcoin = document.querySelector(".bitcoin");
+    const home = document.querySelector(".home");
+    const content = document.querySelector('.content');
+
+    // Function to show the home content
+    function showHome() {
+      home.style.display = 'flex';
+      bitcoin.style.display = 'none';
+      content.style.display = 'block';
+    }
+
+    // Function to show the Bitcoin content
+    function showBitcoin() {
+      home.style.display = 'none';
+      bitcoin.style.display = 'block';
+      content.style.display = 'block';
+    }
+
+    // Show the home content by default
+    showHome();
+
+    // Attach the showBitcoin function to the Bitcoin button click
+    const bitcoinButton = document.querySelector('.sidebar-item[data-target="bitcoin"]');
+    if (bitcoinButton) {
+      bitcoinButton.addEventListener('click', showBitcoin);
+    }
+
+    // Attach the showHome function to the Home button click
+    const homeButton = document.querySelector('.sidebar-item[data-target="home"]');
+    if (homeButton) {
+      homeButton.addEventListener('click', showHome);
+    }
+  });
+</script>
+
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</html>

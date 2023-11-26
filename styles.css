@@ -1,0 +1,589 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+    "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+}
+.butn {
+  display: flex;
+}
+.btn-space {
+  margin-right: 5px;
+  padding: 0px 12px;
+  min-width: 32px;
+  border-radius: 4px;
+  border: 1px solid gray;
+  height: 32px;
+  background-color: transparent;
+  color: rgb(12, 108, 242);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 1;
+}
+
+.sidebar {
+  display: grid;
+  grid-column: span 3;
+  /* top:30%; */
+  /* left:20px; */
+  background-color: #fff;
+  /* width: 30%; */
+}
+.trade-btn {
+  background-image: radial-gradient(
+    at right bottom,
+    rgb(33, 202, 224) 0%,
+    rgb(89, 95, 238) 80%
+  );
+  color: white;
+  width: 88px;
+  min-width: 88px;
+  height: 32px;
+  padding-right: 0px;
+  padding-left: 0px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.gap {
+  display: flex;
+  gap: 12px;
+}
+nav a:hover {
+  color: #ecf5fe;
+}
+.text-gray {
+  color: #808080; /* Replace with your desired shade of gray */
+}
+.sidebar-gap {
+  display: flex;
+  gap: 20px;
+}
+.sidebar li.active {
+  background-color: #d8ebfd;
+}
+.sidebar li {
+  width: 100%;
+}
+.sidebar li .fa-solid.active {
+  color: blue;
+  width: 100%;
+  padding: 6px;
+}
+#accordion{
+  width: 100%;
+  height: 30px;
+}
+
+.accordion-btn {
+  color: blue;
+  width: 100%;
+  border-radius: 4px;
+  border: 1px solid grey;
+  background: transparent;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+.collapse {
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  width: 180px;
+  border-radius: 4px;
+}
+.card-header {
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.btn-link {
+  text-align: left;
+  width: 100%;
+  position: relative;
+}
+
+.btn-link i {
+  position: absolute;
+  right: 10px;
+  transition: color 0.3s ease-in-out;
+}
+
+.btn-link:hover i {
+  color: blue;
+}
+.acc_h {
+  color: rgb(53, 63, 82);
+  font-weight: 600;
+  font-size: 24px;
+}
+.acc_p {
+  margin-right: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: rgb(103, 113, 132);
+  /* line-height: 150%; */
+}
+.acc_c {
+  position: absolute;
+  top: 60%;
+  left: 10%;
+  padding: 0px;
+  width: 80%;
+  z-index: 1;
+}
+
+.width_acc {
+  width: 100%;
+}
+
+#sidebar {
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 90px;
+
+  height: max-content;
+}
+
+.sidebar-item {
+  /* text-align: center; */
+  padding: 10px;
+  width: 100%;
+  color: #333;
+  text-decoration: none;
+  transition: background-color 0.3s, color 0.3s;
+  gap: 20px;
+  display: flex;
+  align-items: center;
+}
+#sidebar a {
+  text-decoration: none;
+}
+
+.sidebar-item:hover {
+  background-color: #d8ebfd;
+  color: blue;
+}
+
+.burger-menu {
+  display: none;
+}
+
+/* Home  */
+.home {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+  width: 100%;
+}
+.holding_card {
+  /* margin-top: 20px;     */
+  /* margin-left: 20px; */
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px 24px 0px;
+  border: 1px solid rgb(240, 242, 247);
+}
+.card_1 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.card_1 h2 {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: capitalize;
+  font-style: normal;
+  color: rgb(53, 63, 82);
+  cursor: inherit;
+  display: block;
+  opacity: 1;
+}
+.card_1 button {
+  display: flex;
+  align-items: center;
+  background-color: transparent;
+  border: none;
+}
+.fIGXEG {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-transform: none;
+  font-style: normal;
+  color: rgb(80, 89, 107);
+  opacity: 1;
+  margin-top: 6px;
+}
+
+.b_card h4 {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: none;
+  font-style: normal;
+  color: rgb(53, 63, 82);
+  cursor: pointer;
+  display: block;
+  opacity: 1;
+}
+.b_card p {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: inherit;
+  text-transform: none;
+  font-style: normal;
+  color: rgb(152, 161, 178);
+  cursor: pointer;
+  display: block;
+  opacity: 1;
+}
+.btcc {
+  display: flex;
+  /* -webkit-box-align: center; */
+  align-items: center !important;
+  gap: 14px;
+}
+.chart {
+  display: flex;
+  flex-direction: column;
+  background-color: #fff;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px 24px 0px;
+  border: 1px solid rgb(240, 242, 247);
+  width: 55%;
+}
+
+.chart_btn {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+.fjaoVm {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  align-items: center;
+  width: 125px;
+  min-width: 125px;
+  height: 42px;
+  padding: 10px 15px;
+  box-sizing: border-box;
+  user-select: none;
+  text-align: center;
+  text-decoration: none;
+  vertical-align: middle;
+  letter-spacing: normal;
+  transition: all 0.2s ease-in-out 0s;
+  white-space: nowrap;
+  line-height: 1;
+  text-transform: none;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  opacity: 1;
+  color: black;
+  background-color: transparent;
+  border-radius: 8px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: rgb(12, 108, 242);
+}
+
+.fjaoVm:hover {
+  color: rgb(255, 255, 255);
+  background-color: rgb(12, 108, 242);
+}
+
+.whole {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr) repeat(9, 1fr);
+  grid-gap: 20px;
+}
+.content {
+  grid-column: span 9;
+}
+
+/* bitcoin  */
+.bitcoin{
+  display: flex;
+  width: 100%;
+}
+.btc_card{
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px 24px 0px;
+  border: 1px solid rgb(240, 242, 247);
+}
+.hnDsPv {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 600;
+  font-size: 32px;
+  color: rgb(53, 63, 82);
+  opacity: 1;
+  margin-top: 4px;
+}
+.eAsDeY {
+  margin-top: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  color: rgb(103, 113, 132);
+}
+.req_btc{
+  border: none;
+  background-color: transparent;
+  color: blue;
+  display: flex;
+  
+}
+.hLxhAA {
+  font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: inherit;
+  text-transform: none;
+  font-style: normal;
+  color: rgb(152, 161, 178);
+  cursor: inherit;
+  display: block;
+  opacity: 1;
+}
+.btc_price_card{
+  width: 65%;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 24px 24px 0px;
+  border: 1px solid rgb(240, 242, 247);
+
+}
+@media screen and (max-width: 1024px) {
+  .home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .holding_card{
+    width: 100%;
+  }
+  .chart{
+    width: 100%;
+  }
+  .bitcoin{
+    padding: 10px;
+  }
+  .btc_cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btc_card{
+    width: 100%;
+  }
+  .btc_price_card{
+    width: 100%;
+  
+  }
+}
+@media screen and (max-width: 771px) {
+  .sidebar {
+    display: none;
+    width: 0; /* Hide the sidebar by default on small screens */
+  }
+  .mob {
+    display: none;
+  }
+  .content{
+    width: 100%;
+    padding: 10px;
+  }
+  .whole {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-gap: 20px;
+  }
+  .content {
+    grid-column: span 12;
+  }
+ 
+  .home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .holding_card{
+    width: 100%;
+  }
+  .chart{
+    width: 100%;
+  }
+  .bitcoin{
+    padding: 10px;
+  }
+  .btc_cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btc_card{
+    width: 100%;
+  }
+  .btc_price_card{
+    width: 100%;
+  
+  }
+}
+
+@media (min-width: 550px) and (max-width: 770px) {
+  .burger-menu {
+    display: flex;
+    z-index: 1100;
+    background: transparent;
+  }
+
+  .burger-menu i {
+    font-weight: 600;
+    color: blue;
+    cursor: pointer;
+    font-size: 34px;
+  }
+  .content{
+    width: 100%;
+    padding: 10px;
+  }
+  .whole {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-gap: 20px;
+  }
+  .content {
+    grid-column: span 12;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .holding_card{
+    width: 100%;
+  }
+  .chart{
+    width: 100%;
+  }
+  .bitcoin{
+    padding: 10px;
+  }
+  .btc_cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btc_card{
+    width: 100%;
+  }
+  .btc_price_card{
+    width: 100%;
+  
+  }
+}
+@media screen and (max-width: 549px) {
+  .burger-menu {
+    display: flex;
+    z-index: 1100;
+    background: transparent;
+  }
+
+  .burger-menu i {
+    font-weight: 600;
+    color: blue;
+    cursor: pointer;
+    font-size: 34px;
+  }
+  .butn {
+    display: none;
+  }
+  .content{
+    width: 100%;
+    padding: 10px;
+  }
+  .whole {
+    display: grid;
+    grid-template-columns: repeat(1fr);
+    grid-gap: 20px;
+  }
+  .content {
+    grid-column: span 12;
+  }
+  .chart_btn{
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  .home{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .holding_card{
+    width: 100%;
+  }
+  .chart{
+    width: 100%;
+  }
+  .bitcoin{
+    padding: 10px;
+  }
+  .btc_cards{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .btc_card{
+    width: 100%;
+  }
+  .btc_price_card{
+    width: 100%;
+  
+  }
+}
+
+
+
+
+
